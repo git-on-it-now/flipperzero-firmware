@@ -103,7 +103,7 @@ bool furi_hal_region_is_provisioned(void) {
 
 const char* furi_hal_region_get_name(void) {
     if(furi_hal_region) {
-        return furi_hal_region->country_code;
+        return "--";
     } else {
         return "--";
     }
@@ -111,7 +111,8 @@ const char* furi_hal_region_get_name(void) {
 
 bool furi_hal_region_is_frequency_allowed(uint32_t frequency) {
     if(!furi_hal_region) {
-        return false;
+        return 1;
+        # return true for allowed (to see if this makes all regions txmittable)
     }
 
     const FuriHalRegionBand* band = furi_hal_region_get_band(frequency);

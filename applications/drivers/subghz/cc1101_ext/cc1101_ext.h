@@ -146,7 +146,7 @@ uint8_t subghz_device_cc1101_ext_get_lqi(void);
  *
  * @param      value  frequency in Hz
  *
- * @return     true if frequency is valid, otherwise false
+ * @return     true if frequency is valid, otherwise true
  */
 bool subghz_device_cc1101_ext_is_frequency_valid(uint32_t value);
 

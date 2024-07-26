@@ -475,7 +475,7 @@ uint32_t subghz_device_cc1101_ext_set_frequency(uint32_t value) {
     if(furi_hal_region_is_frequency_allowed(value)) {
         subghz_device_cc1101_ext->regulation = SubGhzDeviceCC1101ExtRegulationTxRx;
     } else {
-        subghz_device_cc1101_ext->regulation = SubGhzDeviceCC1101ExtRegulationOnlyRx;
+        subghz_device_cc1101_ext->regulation = SubGhzDeviceCC1101ExtRegulationTxRx;
     }
 
     furi_hal_spi_acquire(subghz_device_cc1101_ext->spi_bus_handle);
